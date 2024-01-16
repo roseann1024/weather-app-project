@@ -17,15 +17,15 @@
 <body>
   <div class="weather-app-container">
     <header>
-      <form class="form-input">
-        <input type="search" class="form-input-city" placeholder="Enter a City..." required />
+      <form class="form-input" id="form-input">
+        <input type="search" class="form-input-city" id="form-input-city" placeholder="Enter a City..." required />
         <input type="submit" class="form-input-button" value="Search" />
       </form>
     </header>
     <main class="weather-app-main">
       <div>
-        <div class="weather-app-head">
-          <h1>Centennial</h1>
+        <div class="weather-app-city">
+          <h1 id="weather-app-city">Centennial</h1>
         </div>
         <p class="weather-app-details">
           Monday 17:52, few clouds
@@ -52,7 +52,7 @@
     </footer>
   </div>
 
-  <link rel="stylesheet" href="">
+  <script src="src/script.js"></script>
 </body>
 
 
