@@ -5,43 +5,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="src/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
 
   <title>My Weather App</title>
 </head>
 
 <body>
-  <header>
-    <form>
-      <input type="search" placeholder="Enter a City..." required />
-      <input type="submit" value="Search" />
-    </form>
-  </header>
-  <main>
-    <div>
-      <h1>Centennial</h1>
+  <div class="weather-app-container">
+    <header>
+      <form class="form-input">
+        <input type="search" class="form-input-city" placeholder="Enter a City..." required />
+        <input type="submit" class="form-input-button" value="Search" />
+      </form>
+    </header>
+    <main class="weather-app-main">
+      <div class="weather-app-head">
+        <h1>Centennial</h1>
+        <p class="weather-app-details">
+          Monday 17:52, few clouds
+          <br />
+          Humidity: <strong>74%</strong> Wind <strong> 0km/h </strong>
+        </p>
+      </div>
+      <div class="weather-app-box">
+        <div class="weather-app-icon">☁</div>
+        <div class="weather-app-temperature">-21</div>
+        <div class="weather-app-unit">°C</div>
+      </div>
+    </main>
+
+    <footer>
+
       <p>
-        Monday 17:52, few clouds
-        <br />
-        Humidity: 74% Wind 0km/h
+        Coded by <a href="https://github.com/roseann1024" target="_blank"> Rose Ann Austria</a> is
+        <a href="https://github.com/roseann1024/weather-app-project" target="_blank">open-sourced on GitHub </a>and
+        <a href="https://weather-rva-app.netlify.app/" target="_blank">hosted on Netlify</a>
+
       </p>
-    </div>
-    <div>
-      ☁ -21 °C
-    </div>
-  </main>
 
-  <footer>
+    </footer>
+  </div>
 
-    <p>
-      Coded by <a href="https://github.com/roseann1024" target="_blank"> Rose Ann Austria</a> is <a
-        href="https://github.com/roseann1024/weather-app-project" target="_blank">open-sourced on GitHub </a>and <a
-        href="https://weather-rva-app.netlify.app/" target="_blank">hosted on Netlify</a>
-
-    </p>
-
-  </footer>
-
-<link rel="stylesheet" href="">
+  <link rel="stylesheet" href="">
 </body>
 
 
