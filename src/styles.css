@@ -10,7 +10,7 @@ header {
 }
 
 a {
-  color: #885df1;
+  color: #469af9;
   font-style: italic;
 }
 .weather-app-container {
@@ -32,7 +32,7 @@ a {
 }
 
 .form-input-button {
-  background-color: #885df1;
+  background-color: #469af9;
   padding: 15px 30px;
   border: none;
   border-radius: 6px;
