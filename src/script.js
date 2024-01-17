@@ -1,8 +1,8 @@
 function displayTemp(response) {
   let temperatureElement = document.querySelector("#weather-app-temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
-  cityElement.innerHTML = response.data.city;
   let cityElement = document.querySelector("#weather-app-city");
+  cityElement.innerHTML = response.data.city;
 }
 
 function searchCity(city) {
