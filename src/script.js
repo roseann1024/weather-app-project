@@ -7,17 +7,15 @@ function displayTemp(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
 
-  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
+  timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
-  timeElement.innerHTML = formatDate(date);
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 }
 
 function formatDate(date) {
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
   let days = [
     "Sunday",
     "Monday",
@@ -29,12 +27,15 @@ function formatDate(date) {
   ];
 
   let day = days[date.getDay()];
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   return `${day} ${hours}:${minutes}`;
 }
-
 function searchCity(city) {
   let apiKey = "f78a0dbafabf13190c441b8cod34ftff";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
