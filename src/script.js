@@ -1,5 +1,8 @@
 function displayTemp(response) {
-  c
+  let temperatureElement = document.querySelector("#weather-app-temperature");
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  cityElement.innerHTML = response.data.city;
+  let cityElement = document.querySelector("#weather-app-city");
 }
 
 function searchCity(city) {
@@ -11,11 +14,11 @@ function searchCity(city) {
 function searchButton(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#form-input-city");
-  let cityElement = document.querySelector("#weather-app-city");
-  cityElement.innerHTML = searchInput.value;
 
   searchCity(searchInput.value);
 }
 
 let formInput = document.querySelector("#form-input");
 formInput.addEventListener("submit", searchButton);
+
+searchCity("Centennial");
