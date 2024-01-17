@@ -2,6 +2,7 @@ body {
   background: linear-gradient(-225deg, #d4ffec 0%, #57f2cc 48%, #4596fb 100%);
   background-repeat: no-repeat;
   font-family: "Roboto", sans-serif;
+  min-height: 100vh;
 }
 
 header {
