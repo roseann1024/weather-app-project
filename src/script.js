@@ -6,7 +6,9 @@ function displayTemp(response) {
   let windElement = document.querySelector("#wind");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#weather-app-icon");
 
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
